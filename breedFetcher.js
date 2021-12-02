@@ -1,14 +1,13 @@
 const request = require('request');
 
-const fetchBreedDescription = function(breedName, callback) {
+// const fetchBreedDescription = function(breedName, callback) {
 
-  const url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
-  request(url, (body) => {
-   console.log(body);
-   console.log(typeof body);
-  })
-}
-fetchBreedDescription('Siberian');
+//   const url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
+//   request(url, (body) => {
+//    console.log(body);
+//    console.log(typeof body);
+//   })
+
 //     if (error) {
 //       callback(`Failed to request details: ${error}`,null);
 //     }
@@ -27,3 +26,17 @@ fetchBreedDescription('Siberian');
 // };
 
 // module.exports = { fetchBreedDescription };
+
+
+
+const fetchBreedDescription = function(breedName, callback) {
+  const url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
+   request(url, (body) => {
+    console.log(body);
+  //  console.log(typeof body);
+   })
+};
+
+
+
+module.exports = { fetchBreedDescription };
